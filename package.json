@@ -1,0 +1,23 @@
+{
+  "name": "@/root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "main:start": "pnpm -F @/main run start",
+    "second:start": "pnpm -F @/second run start",
+    "start": "pnpm -r run start",
+    "all:update": "pnpm -r update -i -L",
+    "clean": "find ./ -name node_modules -type d -exec rm -rf {} +"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.18.0",
+    "pnpm": ">=8.9.0"
+  },
+  "dependencies": {
+    "just-kebab-case": "^4.2.0"
+  }
+}
