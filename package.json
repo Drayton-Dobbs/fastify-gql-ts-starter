@@ -1,12 +1,14 @@
+
 {
   "name": "@/root",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "main:start": "pnpm -F @/main run start",
-    "second:start": "pnpm -F @/second run start",
+    "server:start": "pnpm -F @/fastify-server run dev",
     "start": "pnpm -r run start",
+    "with-env": "dotenv -e ./.env -- ",
+    "dev": "pnpm with-env pnpm -r run dev",
     "all:update": "pnpm -r update -i -L",
     "clean": "find ./ -name node_modules -type d -exec rm -rf {} +"
   },
@@ -19,5 +21,8 @@
   },
   "dependencies": {
     "just-kebab-case": "^4.2.0"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^7.3.0"
   }
 }
